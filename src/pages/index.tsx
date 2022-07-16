@@ -1,21 +1,16 @@
 import * as React from "react"
 import "./index.scss";
+import PopUp from "../components/PopUp/PopUp";
+import { Helmet } from "react-helmet"
 
 // markup
 const IndexPage = () => {
   return (
-
-    <div className="page-index">
-      <div className="test-background">
-        <div className="container mx-auto mt-16">
-          <h1>testing.....................</h1><br/>
-          <h1>testing.....................</h1><br/>
-          <h1>testing.....................</h1><br/>
-          <h1>testing.....................</h1><br/>
-          <h1>testing.....................</h1><br/>
-        </div>
+    <div className="container mx-auto mt-32">
+        <PopUp/>
       </div>
-    </div>
+
+          
   )
 }
 
