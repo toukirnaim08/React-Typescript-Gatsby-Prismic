@@ -61,7 +61,7 @@ export default function PopUp () {
               <div className='popup-ui'>
                 <div className='flex'>
                   <p className='p-2 text-white'>
-                    11/04/1991
+                    Prismic PopUp
                   </p>
                   <a href='#' className='ml-auto p-2 text-orange'>
                     CLOSE X
