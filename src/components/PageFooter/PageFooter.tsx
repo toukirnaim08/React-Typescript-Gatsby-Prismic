@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo1 from '../../images/logo1.png';
+import PopUp from '../PopUp/PopUp';
 import './PageFooter.scss'
 
 export default function PageFooter () {
@@ -9,6 +9,7 @@ export default function PageFooter () {
   <h3>Where To Find Me?</h3>
   <p>Lorem ipsum..</p>
 </div>
+<PopUp/>
         </div>
   )
 }

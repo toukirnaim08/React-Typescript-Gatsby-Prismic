@@ -32,6 +32,7 @@ const config: GatsbyConfig = {
         linkResolver: require('./src/utils/linkResolver').linkResolver,
         schemas: {
           popup: require('./custom_types/popup.json'),
+          page_body: require('./custom_types/page_body.json')
         }
       },
     },

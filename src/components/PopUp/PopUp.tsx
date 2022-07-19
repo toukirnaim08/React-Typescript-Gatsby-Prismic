@@ -57,8 +57,7 @@ export default function PopUp () {
 
   return (
     <StaticQuery
-    // Query for only enabled prismic document
-    // If no enabled documents exist, query returns null
+    // Query for prismic document
     query={graphql`
       {
         prismicPopup {
