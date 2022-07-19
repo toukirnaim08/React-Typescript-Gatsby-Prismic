@@ -5,7 +5,7 @@ import './PageFooter.scss'
 export default function PageFooter() {
   return (
     <div className='component-page-footer'>
-      <div className="container-fluid bg-3 text-center">
+      <div className="container-fluid bg text-center">
         <h3>Where To Find Me?</h3>
         <p>Lorem ipsum..</p>
       </div>

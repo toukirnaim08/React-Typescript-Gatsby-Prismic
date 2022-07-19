@@ -19,7 +19,7 @@ export default function PageBody() {
     `}
       render={content => (
         <div className='component-page-body'>
-          <div className='bg-2'>
+          <div className='bg'>
             {content.prismicPageBody != null && (
               <PrismicRichText
                 field={content.prismicPageBody.data.body.richText}
