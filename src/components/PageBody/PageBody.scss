@@ -1,15 +1,16 @@
 @layer components {
-    .component-page-body {
-  
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
-          }
-          .bg-2 {
-            background-color: #474e5d; /* Dark Blue */
-            color: #ffffff;
-          }
-      
+  .component-page-body {
+
+    .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
+
+    .bg-2 {
+      background-color: #474e5d;
+      /* Dark Blue */
+      color: #ffffff;
+    }
+
   }
-  
+}

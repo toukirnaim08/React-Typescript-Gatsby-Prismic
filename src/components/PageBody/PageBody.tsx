@@ -3,10 +3,10 @@ import { graphql, StaticQuery } from 'gatsby'
 import { PrismicRichText } from '@prismicio/react'
 import './PageBody.scss'
 
-export default function PageBody () {
+export default function PageBody() {
   return (
     <StaticQuery
-    query={graphql`
+      query={graphql`
       {
         prismicPageBody {
           data {
@@ -17,24 +17,24 @@ export default function PageBody () {
         }
       }
     `}
-    render={content => (
-      <div className='component-page-body'>
-        <div className='bg-2'>
-        {content.prismicPageBody != null && (
-                <PrismicRichText
-                  field={content.prismicPageBody.data.body.richText}
-                  components={{
-                    hyperlink: ({ node, children }) => (
-                      <a href={node.data.url} className='text-orage underline'>
-                        {children}
-                      </a>
-                    )
-                  }}
-                />
-        )}
+      render={content => (
+        <div className='component-page-body'>
+          <div className='bg-2'>
+            {content.prismicPageBody != null && (
+              <PrismicRichText
+                field={content.prismicPageBody.data.body.richText}
+                components={{
+                  hyperlink: ({ node, children }) => (
+                    <a href={node.data.url} className='text-orage underline'>
+                      {children}
+                    </a>
+                  )
+                }}
+              />
+            )}
+          </div>
         </div>
-      </div>
-    )}
-  ></StaticQuery>
+      )}
+    ></StaticQuery>
   )
 }

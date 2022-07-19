@@ -1,15 +1,16 @@
 @layer components {
-    .component-page-footer {
-  
-        .container-fluid {
-            padding-top: 70px;
-            padding-bottom: 70px;
-          }
-          .bg-3 {
-            background-color: #ffffff; /* White */
-            color: #555555;
-          }
-      
+  .component-page-footer {
+
+    .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
+
+    .bg-3 {
+      background-color: #ffffff;
+      /* White */
+      color: #555555;
+    }
+
   }
-  
+}

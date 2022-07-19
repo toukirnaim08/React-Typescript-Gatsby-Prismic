@@ -8,11 +8,11 @@ import PageFooter from "../components/PageFooter/PageFooter";
 const IndexPage = () => {
   return (
     <div className="page-index">
-  <PageHeader/>
-  <PageBody/>
-  <PageFooter/>
-  </div>
-          
+      <PageHeader />
+      <PageBody />
+      <PageFooter />
+    </div>
+
   )
 }
 

@@ -7,7 +7,7 @@ import './PopUp.scss'
 const MAX_POP_UP_DELAY = 2 // days
 const COOKIE_KEY = 'closing_time'
 
-export default function PopUp () {
+export default function PopUp() {
   const cookies = new Cookies()
   // Initially no popup
   const [isShowPopUp, setIsShowPopUp] = useState(false)
@@ -57,8 +57,8 @@ export default function PopUp () {
 
   return (
     <StaticQuery
-    // Query for prismic document
-    query={graphql`
+      // Query for prismic document
+      query={graphql`
       {
         prismicPopup {
           data {
@@ -72,45 +72,45 @@ export default function PopUp () {
         }
       }
     `}
-    render={content => (
-      <div className='component-popup'>
-        {content.prismicPopup != null && isShowPopUp && (
-          <div className='popup-layout'>
-            <div className='popup-ui'>
-              <div className='flex'>
-                <h1 className='p-2 text-white'>
-                  {content.prismicPopup.data.title.text}
-                </h1>
-                <a
-                  href='#'
-                  onClick={() => handlePopupClose()}
-                  className='ml-auto p-2 text-orange'
-                >
-                  CLOSE X
-                </a>
-              </div>
-              <div className='flex'>
-              <div className='p-2'>
-                <PrismicRichText
-                  field={content.prismicPopup.data.body.richText}
-                  components={{
-                    hyperlink: ({ node, children }) => (
-                      <a href={node.data.url} className='text-white underline'>
-                        {children}
-                      </a>
-                    ),
-                    paragraph: ({ children }) => (
-                      <p className='text-white'>{children}</p>
-                    )
-                  }}
-                />
+      render={content => (
+        <div className='component-popup'>
+          {content.prismicPopup != null && isShowPopUp && (
+            <div className='popup-layout'>
+              <div className='popup-ui'>
+                <div className='flex'>
+                  <h1 className='p-2 text-white'>
+                    {content.prismicPopup.data.title.text}
+                  </h1>
+                  <a
+                    href='#'
+                    onClick={() => handlePopupClose()}
+                    className='ml-auto p-2 text-orange'
+                  >
+                    CLOSE X
+                  </a>
+                </div>
+                <div className='flex'>
+                  <div className='p-2'>
+                    <PrismicRichText
+                      field={content.prismicPopup.data.body.richText}
+                      components={{
+                        hyperlink: ({ node, children }) => (
+                          <a href={node.data.url} className='text-white underline'>
+                            {children}
+                          </a>
+                        ),
+                        paragraph: ({ children }) => (
+                          <p className='text-white'>{children}</p>
+                        )
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            </div>
-          </div>
-        )}
-      </div>
-    )}
-  ></StaticQuery>
+          )}
+        </div>
+      )}
+    ></StaticQuery>
   )
 }
